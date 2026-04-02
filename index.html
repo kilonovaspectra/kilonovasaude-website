@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kilonova Saúde — Especialistas em Medicina da Dor. Consulta da Dor, Acupuntura Auricular e Procedimentos Minimamente Invasivos." />
+  <meta name="description" content="Kilonova Saúde — Especialistas em Medicina da Dor. Consulta da Dor, Acupuntura Auricular e Procedimentos Minimamente Invasivos na Região Centro." />
   <title>Kilonova Saúde — Medicina da Dor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,8 +17,72 @@
     <div class="cookie-content">
       <p data-i18n="cookie_text">Este site utiliza cookies para melhorar a sua experiência e garantir o funcionamento do formulário de contacto, em conformidade com o RGPD.</p>
       <div class="cookie-actions">
-        <a href="privacy.html" data-i18n="cookie_policy">Política de Privacidade</a>
+        <button class="cookie-link" onclick="openModal('privacy-modal')" data-i18n="cookie_policy">Política de Privacidade</button>
         <button id="cookie-accept" data-i18n="cookie_accept">Aceitar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY MODAL -->
+  <div id="privacy-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Política de Privacidade">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('privacy-modal')" aria-label="Fechar">&times;</button>
+      <div class="modal-content">
+        <h2 data-i18n="modal_privacy_title">Política de Privacidade</h2>
+        <p class="modal-updated" data-i18n="modal_privacy_updated">Última atualização: Janeiro de 2025</p>
+
+        <h3 data-i18n="modal_p1_title">1. Responsável pelo Tratamento de Dados</h3>
+        <p data-i18n="modal_p1_body">Kilonova Saúde, representada pela Dra. Luísa Martins Ferreira, NIF individual, é responsável pelo tratamento dos dados pessoais recolhidos através deste website (kilonovasaude.pt), em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD — Regulamento UE 2016/679). Contacto: info@kilonovasaude.pt · 914 993 586.</p>
+
+        <h3 data-i18n="modal_p2_title">2. Dados Recolhidos</h3>
+        <p data-i18n="modal_p2_body">Através do formulário de contacto recolhemos: nome completo, número de telefone, endereço de email, serviço de interesse e informações clínicas facultadas voluntariamente. Também recolhemos dados de navegação através de cookies técnicos essenciais.</p>
+
+        <h3 data-i18n="modal_p3_title">3. Finalidade e Base Legal</h3>
+        <p data-i18n="modal_p3_body">Os seus dados são tratados para resposta ao pedido de marcação de consulta (base legal: execução de contrato, Art. 6.º n.º 1 al. b) do RGPD) e para comunicações relacionadas com os serviços prestados (base legal: interesse legítimo, Art. 6.º n.º 1 al. f) do RGPD).</p>
+
+        <h3 data-i18n="modal_p4_title">4. Conservação dos Dados</h3>
+        <p data-i18n="modal_p4_body">Os dados são conservados pelo período estritamente necessário à finalidade que motivou a sua recolha, e no máximo por 5 anos após a última interação, salvo obrigação legal de conservação superior.</p>
+
+        <h3 data-i18n="modal_p5_title">5. Partilha de Dados</h3>
+        <p data-i18n="modal_p5_body">Os seus dados não são vendidos nem cedidos a terceiros para fins comerciais. Podem ser partilhados com prestadores de serviços técnicos exclusivamente para efeitos de prestação do serviço, com obrigação contratual de confidencialidade.</p>
+
+        <h3 data-i18n="modal_p6_title">6. Os Seus Direitos</h3>
+        <p data-i18n="modal_p6_body">Nos termos do RGPD, tem direito de acesso, retificação, apagamento, limitação, portabilidade e oposição. Para exercer estes direitos contacte info@kilonovasaude.pt. Tem ainda o direito de reclamação junto da CNPD (www.cnpd.pt).</p>
+
+        <h3 data-i18n="modal_p7_title">7. Cookies</h3>
+        <p data-i18n="modal_p7_body">Este site utiliza apenas cookies técnicos essenciais, necessários ao funcionamento do formulário de contacto e à memorização das suas preferências de idioma e consentimento. Não utilizamos cookies de rastreamento ou publicidade.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS MODAL -->
+  <div id="terms-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Termos de Uso">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('terms-modal')" aria-label="Fechar">&times;</button>
+      <div class="modal-content">
+        <h2 data-i18n="modal_terms_title">Termos de Uso</h2>
+        <p class="modal-updated" data-i18n="modal_terms_updated">Última atualização: Janeiro de 2025</p>
+
+        <h3 data-i18n="modal_t1_title">1. Identificação</h3>
+        <p data-i18n="modal_t1_body">O presente website é propriedade de Kilonova Saúde, representada pela Dra. Luísa Martins Ferreira, Especialista em Anestesiologia e Medicina da Dor. Contacto: info@kilonovasaude.pt · 914 993 586.</p>
+
+        <h3 data-i18n="modal_t2_title">2. Objeto e Âmbito</h3>
+        <p data-i18n="modal_t2_body">O presente website tem carácter exclusivamente informativo e destina-se a apresentar os serviços da Kilonova Saúde. A utilização deste site implica a aceitação integral dos presentes termos.</p>
+
+        <h3 data-i18n="modal_t3_title">3. Informação Clínica</h3>
+        <p data-i18n="modal_t3_body">Toda a informação médica disponível neste site tem carácter meramente informativo e educacional. Não constitui conselho médico, diagnóstico ou prescrição terapêutica, e não substitui em nenhuma circunstância a consulta médica presencial com um profissional de saúde qualificado.</p>
+
+        <h3 data-i18n="modal_t4_title">4. Propriedade Intelectual</h3>
+        <p data-i18n="modal_t4_body">Todos os conteúdos deste website — incluindo textos, imagens, logótipos, design e código — são propriedade exclusiva da Kilonova Saúde e encontram-se protegidos pelas leis de propriedade intelectual aplicáveis. É proibida a sua reprodução total ou parcial sem autorização expressa e por escrito.</p>
+
+        <h3 data-i18n="modal_t5_title">5. Responsabilidade</h3>
+        <p data-i18n="modal_t5_body">A Kilonova Saúde não se responsabiliza por danos resultantes da utilização indevida das informações disponibilizadas neste site, nem pela indisponibilidade temporária do mesmo por razões técnicas ou de manutenção.</p>
+
+        <h3 data-i18n="modal_t6_title">6. Lei Aplicável</h3>
+        <p data-i18n="modal_t6_body">Os presentes termos regem-se pela lei portuguesa. Qualquer litígio será submetido aos tribunais da comarca competente, com expressa renúncia a qualquer outro foro.</p>
+
+        <h3 data-i18n="modal_t7_title">7. Alterações</h3>
+        <p data-i18n="modal_t7_body">A Kilonova Saúde reserva-se o direito de alterar os presentes termos a qualquer momento. As alterações produzem efeitos imediatos após a sua publicação neste website.</p>
       </div>
     </div>
   </div>
@@ -34,16 +98,25 @@
         <ul>
           <li><a href="#about" data-i18n="nav_about">Sobre</a></li>
           <li><a href="#services" data-i18n="nav_services">Serviços</a></li>
+          <li><a href="#events" data-i18n="nav_events">Eventos</a></li>
           <li><a href="#testimonials" data-i18n="nav_testimonials">Testemunhos</a></li>
           <li><a href="#contact" class="nav-cta" data-i18n="nav_contact">Marcar Consulta</a></li>
         </ul>
       </nav>
       <div class="header-right">
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="pt">PT</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="fr">FR</button>
-          <button class="lang-btn" data-lang="de">DE</button>
+        <!-- Language dropdown -->
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-current-btn" id="lang-current-btn" aria-haspopup="listbox" aria-expanded="false">
+            <span id="lang-flag">🇵🇹</span>
+            <span id="lang-label">Português</span>
+            <svg class="lang-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="lang-list" id="lang-list" role="listbox">
+            <li><button data-lang="pt" class="lang-option active"><span>🇵🇹</span> Português</button></li>
+            <li><button data-lang="en" class="lang-option"><span>🇬🇧</span> English</button></li>
+            <li><button data-lang="fr" class="lang-option"><span>🇫🇷</span> Français</button></li>
+            <li><button data-lang="de" class="lang-option"><span>🇩🇪</span> Deutsch</button></li>
+          </ul>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -54,9 +127,14 @@
 
   <!-- HERO -->
   <section id="hero">
+    <canvas id="hero-canvas"></canvas>
     <div class="hero-overlay"></div>
+    <!-- Floating orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow" data-i18n="hero_eyebrow">Medicina da Dor</p>
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">Medicina da Dor · Região Centro</p>
       <h1 data-i18n="hero_title">A Dor Crónica<br>Tem Solução.</h1>
       <p class="hero-sub" data-i18n="hero_sub">Avaliação especializada. Tratamento personalizado.<br>Recupere a sua qualidade de vida.</p>
       <div class="hero-actions">
@@ -86,7 +164,33 @@
       </div>
       <div class="trust-item">
         <span class="trust-icon">&#9679;</span>
-        <span data-i18n="trust_4">Cuidados Personalizados</span>
+        <span data-i18n="trust_4">Coimbra · Viseu · Castelo Branco</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="15">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label" data-i18n="stat1_label">Anos de Experiência</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="2000">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label" data-i18n="stat2_label">Doentes Tratados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="8">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label" data-i18n="stat3_label">Unidades de Saúde Parceiras</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="3">0</div>
+        <div class="stat-plus"></div>
+        <div class="stat-label" data-i18n="stat4_label">Distritos na Região Centro</div>
       </div>
     </div>
   </section>
@@ -199,6 +303,96 @@
     </div>
   </section>
 
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="events_eyebrow">Região Centro · Coimbra · Viseu · Castelo Branco</p>
+        <h2 data-i18n="events_title">Eventos & Formação em Saúde</h2>
+        <p class="section-sub" data-i18n="events_sub">Iniciativas e eventos relevantes na área da dor, funcionalidade e bem-estar na Região Centro de Portugal.</p>
+      </div>
+      <div class="events-grid">
+
+        <article class="event-card">
+          <div class="event-date-badge">
+            <span class="event-day">14</span>
+            <span class="event-month" data-i18n="event_month_jun">Jun</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag" data-i18n="event_tag_congress">Congresso</span>
+            <h3 data-i18n="ev1_title">Congresso de Medicina da Dor — Região Centro</h3>
+            <p data-i18n="ev1_desc">Encontro científico dedicado às mais recentes abordagens terapêuticas em dor crónica, com sessões sobre técnicas intervencionistas e medicina integrativa.</p>
+            <div class="event-meta">
+              <span class="event-location">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                Coimbra
+              </span>
+              <a href="#" class="event-link" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-date-badge">
+            <span class="event-day">22</span>
+            <span class="event-month" data-i18n="event_month_sep">Set</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag tag-workshop" data-i18n="event_tag_workshop">Workshop</span>
+            <h3 data-i18n="ev2_title">Workshop: Intervenção Minimamente Invasiva na Dor Lombar</h3>
+            <p data-i18n="ev2_desc">Formação prática sobre técnicas de bloqueio nervoso e infiltrações ecoguiadas dirigida a médicos especialistas em anestesiologia, reumatologia e fisiatria.</p>
+            <div class="event-meta">
+              <span class="event-location">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                Viseu
+              </span>
+              <a href="#" class="event-link" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-date-badge">
+            <span class="event-day">08</span>
+            <span class="event-month" data-i18n="event_month_nov">Nov</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag tag-jornadas" data-i18n="event_tag_jornadas">Jornadas</span>
+            <h3 data-i18n="ev3_title">Jornadas de Neurologia e Dor Crónica</h3>
+            <p data-i18n="ev3_desc">Programa multidisciplinar sobre dor neuropática, com comunicações científicas, casos clínicos e mesa redonda sobre neuromodulação e qualidade de vida do doente.</p>
+            <div class="event-meta">
+              <span class="event-location">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                Castelo Branco
+              </span>
+              <a href="#" class="event-link" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-date-badge">
+            <span class="event-day">03</span>
+            <span class="event-month" data-i18n="event_month_mar">Mar</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag tag-simposio" data-i18n="event_tag_simp">Simpósio</span>
+            <h3 data-i18n="ev4_title">Simpósio de Bem-Estar e Funcionalidade</h3>
+            <p data-i18n="ev4_desc">Evento aberto ao público dedicado à promoção da saúde, controlo da dor crónica e estratégias para uma vida funcional e ativa, com sessões de esclarecimento gratuitas.</p>
+            <div class="event-meta">
+              <span class="event-location">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                Coimbra
+              </span>
+              <a href="#" class="event-link" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- TESTIMONIALS -->
   <section id="testimonials">
     <div class="container">
@@ -269,11 +463,11 @@
           </div>
           <div class="contact-detail-item">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.61 19.79 19.79 0 01.03 1 2 2 0 012 .03h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            <a href="tel:+351910145351">910 145 351</a>
+            <a href="tel:+351914993586">914 993 586</a>
           </div>
           <div class="contact-detail-item">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
-            <span data-i18n="contact_location">Prestação de serviços em vários hospitais em Portugal</span>
+            <span data-i18n="contact_location">Diferentes unidades de saúde, públicas e privadas, na Região Centro — Coimbra, Viseu e Castelo Branco</span>
           </div>
         </div>
         <div class="social-links">
@@ -318,7 +512,7 @@
         <div class="form-checkbox">
           <input type="checkbox" id="privacy" name="privacy" required />
           <label for="privacy">
-            <span data-i18n="form_privacy_1">Li e aceito a </span><a href="privacy.html" data-i18n="form_privacy_link">Política de Privacidade</a>
+            <span data-i18n="form_privacy_1">Li e aceito a </span><button type="button" class="inline-link" onclick="openModal('privacy-modal')" data-i18n="form_privacy_link">Política de Privacidade</button>
           </label>
         </div>
         <button type="submit" class="btn btn-primary btn-full" data-i18n="form_submit">Enviar Pedido de Marcação</button>
@@ -334,21 +528,24 @@
       <div class="footer-brand">
         <img src="images/logo-white.png" alt="Kilonova Saúde" class="footer-logo" />
         <p data-i18n="footer_tagline">Especialistas em Medicina da Dor</p>
+        <p class="footer-region" data-i18n="footer_region">Região Centro · Coimbra · Viseu · Castelo Branco</p>
       </div>
       <div class="footer-links">
         <a href="#about" data-i18n="nav_about">Sobre</a>
         <a href="#services" data-i18n="nav_services">Serviços</a>
+        <a href="#events" data-i18n="nav_events">Eventos</a>
         <a href="#contact" data-i18n="nav_contact">Marcar Consulta</a>
-        <a href="privacy.html" data-i18n="footer_privacy">Política de Privacidade</a>
+        <button class="footer-legal-link" onclick="openModal('privacy-modal')" data-i18n="footer_privacy">Política de Privacidade</button>
+        <button class="footer-legal-link" onclick="openModal('terms-modal')" data-i18n="footer_terms">Termos de Uso</button>
       </div>
       <div class="footer-contact">
         <a href="mailto:info@kilonovasaude.pt">info@kilonovasaude.pt</a>
-        <a href="tel:+351910145351">910 145 351</a>
+        <a href="tel:+351914993586">914 993 586</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p data-i18n="footer_copy">&copy; 2024 Kilonova Saúde. Todos os direitos reservados.</p>
+        <p data-i18n="footer_copy">&copy; 2025 Kilonova Saúde. Todos os direitos reservados.</p>
         <p data-i18n="footer_disclaimer">A informação disponível neste site tem carácter informativo e não substitui a consulta médica.</p>
       </div>
     </div>
