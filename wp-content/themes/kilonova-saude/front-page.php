@@ -1,0 +1,298 @@
+<?php get_header(); ?>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">Medicina da Dor · Região Centro</p>
+      <h1 data-i18n="hero_title">A Dor Crónica<br>Tem Solução.</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Avaliação especializada. Tratamento personalizado.<br>Recupere a sua qualidade de vida.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Marcar Consulta</a>
+        <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">Conheça os Serviços</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator"><span></span></div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container trust-items">
+      <div class="trust-item"><span class="trust-icon">&#9679;</span><span data-i18n="trust_1">Especialista em Anestesiologia</span></div>
+      <div class="trust-item"><span class="trust-icon">&#9679;</span><span data-i18n="trust_2">Medicina da Dor</span></div>
+      <div class="trust-item"><span class="trust-icon">&#9679;</span><span data-i18n="trust_3">Abordagem Baseada na Evidência</span></div>
+      <div class="trust-item"><span class="trust-icon">&#9679;</span><span data-i18n="trust_4">Coimbra · Viseu · Castelo Branco</span></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="container stats-grid stats-grid-3">
+      <div class="stat-item">
+        <div class="stat-number-wrap">
+          <div class="stat-number" data-target="2000">0</div>
+          <div class="stat-plus">+</div>
+        </div>
+        <div class="stat-label" data-i18n="stat2_label">Doentes Tratados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number-wrap">
+          <div class="stat-number" data-target="4">0</div>
+        </div>
+        <div class="stat-label" data-i18n="stat3_label">Unidades de Saúde Parceiras</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number-wrap">
+          <div class="stat-number" data-target="3">0</div>
+        </div>
+        <div class="stat-label" data-i18n="stat4_label">Distritos na Região Centro</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-image-wrap">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/doctor.png" alt="Dra. Luísa Martins Ferreira" class="about-photo" />
+        <div class="about-card">
+          <p class="about-card-name">Dra. Luísa Martins Ferreira</p>
+          <p class="about-card-title" data-i18n="about_card_title">Especialista em Anestesiologia<br>e Medicina da Dor</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow" data-i18n="about_eyebrow">Sobre a Médica</p>
+        <h2 data-i18n="about_title">Uma Abordagem Especializada à Dor Crónica</h2>
+        <p data-i18n="about_p1">A dor crónica afeta milhões de pessoas e continua a ser uma das condições mais subdiagnosticadas e subtratadas da medicina moderna. Para quem a vive, representa muito mais do que um sintoma — é uma limitação real da qualidade de vida, da capacidade funcional e do bem-estar psicológico.</p>
+        <p data-i18n="about_p2">Enquanto especialista em Anestesiologia e Medicina da Dor, a minha abordagem assenta na avaliação rigorosa e individualizada de cada doente, na aplicação de protocolos terapêuticos baseados na evidência científica mais atual, e na utilização de técnicas minimamente invasivas de controlo da dor.</p>
+        <p data-i18n="about_p3">A Kilonova Saúde nasce da convicção de que todos os doentes merecem acesso a cuidados especializados e de excelência. O objetivo não é apenas controlar a dor — é restabelecer a funcionalidade, a autonomia e a qualidade de vida de cada pessoa que nos procura.</p>
+        <a href="#contact" class="btn btn-primary" data-i18n="about_cta">Agendar Consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="services_eyebrow">O Que Fazemos</p>
+        <h2 data-i18n="services_title">Serviços Especializados</h2>
+        <p class="section-sub" data-i18n="services_sub">Tratamentos baseados na evidência científica, orientados para a recuperação da sua qualidade de vida.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 24h4M28 24h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="srv1_title">Consulta da Dor</h3>
+          <p data-i18n="srv1_desc">Avaliação clínica completa e individualizada, com diagnóstico diferencial rigoroso e elaboração de plano terapêutico personalizado para o controlo eficaz da dor crónica.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="10" rx="4" ry="4" stroke="currentColor" stroke-width="2"/><path d="M20 14c-2 4-6 8-6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M28 14c2 4 6 8 6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 28c2 4 4 8 6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M30 28c-2 4-4 8-6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="29" r="2" fill="currentColor"/><circle cx="34" cy="29" r="2" fill="currentColor"/><circle cx="24" cy="40" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3 data-i18n="srv2_title">Acupuntura Auricular</h3>
+          <p data-i18n="srv2_desc">Técnica de medicina complementar baseada na estimulação de pontos específicos do pavilhão auricular, com eficácia reconhecida no tratamento da dor aguda e crónica e na modulação do sistema nervoso autónomo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M12 36l8-8 4 4 12-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="36" cy="14" r="6" stroke="currentColor" stroke-width="2"/><path d="M34 14h4M36 12v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="srv3_title">Procedimentos de Intervenção Minimamente Invasivos</h3>
+          <p data-i18n="srv3_desc">Realização de procedimentos intervencionistas guiados por imagem, incluindo bloqueios nervosos, infiltrações e técnicas de neuromodulação, com o objetivo de reduzir a dor e melhorar a funcionalidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY KILONOVA -->
+  <section id="why">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="why_eyebrow">Porquê a Kilonova Saúde</p>
+        <h2 data-i18n="why_title">O Nosso Compromisso</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><div class="why-number">01</div><h4 data-i18n="why1_title">Rigor Científico</h4><p data-i18n="why1_desc">Todos os tratamentos assentam em protocolos baseados na evidência científica mais atual da medicina da dor.</p></div>
+        <div class="why-item"><div class="why-number">02</div><h4 data-i18n="why2_title">Abordagem Individualizada</h4><p data-i18n="why2_desc">Cada doente é único. O plano terapêutico é sempre desenhado à medida das suas necessidades específicas.</p></div>
+        <div class="why-item"><div class="why-number">03</div><h4 data-i18n="why3_title">Técnicas Minimamente Invasivas</h4><p data-i18n="why3_desc">Privilegiamos procedimentos de baixo risco e alta eficácia, minimizando o desconforto e maximizando os resultados.</p></div>
+        <div class="why-item"><div class="why-number">04</div><h4 data-i18n="why4_title">Cuidado Centrado no Doente</h4><p data-i18n="why4_desc">O seu bem-estar é a nossa prioridade. Acompanhamento contínuo e comunicação clara em todas as etapas do tratamento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="events_eyebrow">Região Centro · Coimbra · Viseu · Castelo Branco</p>
+        <h2 data-i18n="events_title">Eventos &amp; Formação em Saúde</h2>
+        <p class="section-sub" data-i18n="events_sub">Iniciativas e eventos relevantes na área da dor, funcionalidade e bem-estar na Região Centro de Portugal.</p>
+      </div>
+      <div class="events-grid">
+        <article class="event-card">
+          <div class="event-date-badge"><span class="event-day">09</span><span class="event-month">Mai</span></div>
+          <div class="event-info">
+            <span class="event-tag tag-simposio">Internacional</span>
+            <h3>17th World Congress on Neuromodulation — INS 2026</h3>
+            <p>Congresso mundial dedicado à neuromodulação, incluindo tratamento da dor crónica, estimulação cerebral profunda e inteligência artificial aplicada à medicina.</p>
+            <div class="event-meta">
+              <span class="event-location"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>Lisboa</span>
+              <a href="https://ins-congress.com/" class="event-link" target="_blank" rel="noopener noreferrer" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date-badge"><span class="event-day">28</span><span class="event-month">Mai</span></div>
+          <div class="event-info">
+            <span class="event-tag tag-congress">Congresso</span>
+            <h3>Congresso de Neurologia 2026 — SPN</h3>
+            <p>Congresso nacional da Sociedade Portuguesa de Neurologia, com programa científico abrangente sobre dor neuropática e patologia cerebrovascular.</p>
+            <div class="event-meta">
+              <span class="event-location"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>Évora</span>
+              <a href="http://www.spneurologia.com/evento/congresso-de-neurologia-2026/518" class="event-link" target="_blank" rel="noopener noreferrer" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date-badge"><span class="event-day">15</span><span class="event-month">Out</span></div>
+          <div class="event-info">
+            <span class="event-tag tag-jornadas">Congresso APED</span>
+            <h3>IX Congresso APED — NeuroDor 360</h3>
+            <p>Congresso da Associação Portuguesa para o Estudo da Dor dedicado à dor neuropática, alinhado com o Ano Global da Dor Neuropática da IASP 2026.</p>
+            <div class="event-meta">
+              <span class="event-location"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>Tomar</span>
+              <a href="https://www.aped-dor.org" class="event-link" target="_blank" rel="noopener noreferrer" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date-badge"><span class="event-day">02</span><span class="event-month">Nov</span></div>
+          <div class="event-info">
+            <span class="event-tag tag-simposio">Internacional</span>
+            <h3>12th World Congress on Low Back &amp; Pelvic Girdle Pain</h3>
+            <p>Congresso mundial interdisciplinar sobre dor lombar e pélvica crónica, reunindo especialistas em fisioterapia, medicina da dor e neurociências.</p>
+            <div class="event-meta">
+              <span class="event-location"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>Porto</span>
+              <a href="https://www.worldcongresslbp.com/" class="event-link" target="_blank" rel="noopener noreferrer" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date-badge"><span class="event-day">19</span><span class="event-month">Abr</span></div>
+          <div class="event-info">
+            <span class="event-tag tag-wellness">Caminhada</span>
+            <h3>Trilho da Saúde — Serra da Lousã</h3>
+            <p>Caminhada terapêutica com percurso adaptado a pessoas com dor crónica, com acompanhamento médico e sessão de educação sobre gestão da dor.</p>
+            <div class="event-meta">
+              <span class="event-location"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>Lousã · Região Centro</span>
+              <a href="https://www.cm-lousa.pt/turismo/percursos-pedestres" class="event-link" target="_blank" rel="noopener noreferrer" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date-badge"><span class="event-day">06</span><span class="event-month">Jun</span></div>
+          <div class="event-info">
+            <span class="event-tag tag-wellness">Yoga &amp; Mindfulness</span>
+            <h3>Dia Internacional do Yoga — Viseu</h3>
+            <p>Sessão pública de yoga e meditação com workshops sobre técnicas de respiração e relaxamento para gestão da dor crónica e promoção do bem-estar.</p>
+            <div class="event-meta">
+              <span class="event-location"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 018 10.5C5.5 10.5 1.5 7 1.5 6a6.5 6.5 0 1113 0c0 1-4 4.5-6.5 4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>Viseu</span>
+              <a href="https://www.cm-viseu.pt/desporto-e-bem-estar" class="event-link" target="_blank" rel="noopener noreferrer" data-i18n="event_more">Saber mais</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="test_eyebrow">Testemunhos</p>
+        <h2 data-i18n="test_title">O Que Dizem os Nossos Doentes</h2>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text" data-i18n="t1_text">"Depois de anos a conviver com dores crónicas nas costas, finalmente encontrei uma abordagem que me devolveu a qualidade de vida. A Dra. Luísa foi incansável na procura da solução certa para o meu caso."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M.S.</div>
+              <div><p class="author-name">M.S.</p><p class="author-detail" data-i18n="t1_detail">52 anos · Dor Lombar Crónica</p></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text" data-i18n="t2_text">"A consulta foi muito completa e esclarecedora. Pela primeira vez senti que alguém realmente ouviu a minha história e me apresentou um plano de tratamento claro e realista."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">J.R.</div>
+              <div><p class="author-name">J.R.</p><p class="author-detail" data-i18n="t2_detail">38 anos · Enxaqueca Crónica</p></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text" data-i18n="t3_text">"Recomendo vivamente. O profissionalismo, a dedicação e o rigor técnico da Dra. Luísa são notáveis. Os bloqueios nervosos transformaram a minha vida."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A.C.</div>
+              <div><p class="author-name">A.C.</p><p class="author-detail" data-i18n="t3_detail">61 anos · Neuropatia Periférica</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prev-btn" aria-label="Anterior">&#8592;</button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button class="slider-btn" id="next-btn" aria-label="Próximo">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="section-eyebrow" data-i18n="contact_eyebrow">Contacto</p>
+        <h2 data-i18n="contact_title">Marque a Sua Consulta</h2>
+        <p data-i18n="contact_sub">Preencha o formulário e entraremos em contacto para confirmar a sua marcação. Respondemos em menos de 24 horas.</p>
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <a href="mailto:info@kilonovasaude.pt">info@kilonovasaude.pt</a>
+          </div>
+          <div class="contact-detail-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.61 19.79 19.79 0 01.03 1 2 2 0 012 .03h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <a href="tel:+351914993586">914 993 586</a>
+          </div>
+          <div class="contact-detail-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span data-i18n="contact_location">Diferentes unidades de saúde, públicas e privadas, na Região Centro — Coimbra, Viseu e Castelo Branco</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="1.5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form 7 -->
+      <div class="contact-form-wrap">
+        <?php if (function_exists('wpcf7_contact_form')) :
+          echo do_shortcode('[contact-form-7 id="1" title="Marcação de Consulta"]');
+        else : ?>
+          <p style="color:var(--gray-500); padding:40px; text-align:center;">Formulário de contacto em configuração.</p>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
+
+<?php get_footer(); ?>
