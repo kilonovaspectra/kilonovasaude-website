@@ -287,7 +287,7 @@
       <!-- Contact Form 7 -->
       <div class="contact-form-wrap">
         <?php if (function_exists('wpcf7_contact_form')) :
-          echo do_shortcode('[contact-form-7 id="1" title="Marcação de Consulta"]');
+          echo do_shortcode('[contact-form-7 id="01b9372" title="Marcação de Consulta"]');
         else : ?>
           <p style="color:var(--gray-500); padding:40px; text-align:center;">Formulário de contacto em configuração.</p>
         <?php endif; ?>
