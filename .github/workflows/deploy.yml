@@ -23,3 +23,15 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+
+      - name: Deploy .htaccess de segurança para raiz do WordPress
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_PATH }}
+          local-dir: ./wp-root/
+          exclude: |
+            **/.git*
+            **/.git*/**
