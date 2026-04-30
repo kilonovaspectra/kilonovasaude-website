@@ -1020,25 +1020,72 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 /* ---- CONTACT FORM 7 ---- */
 .contact-form-wrap { background: var(--white); border-radius: 20px; padding: 48px 40px; box-shadow: var(--shadow); }
 .wpcf7 { width: 100%; }
-.wpcf7 .wpcf7-form { display: flex; flex-direction: column; gap: 0; }
-.wpcf7 label { font-size: 0.85rem; font-weight: 600; color: var(--navy); display: block; margin-bottom: 6px; margin-top: 20px; }
-.wpcf7 label:first-child { margin-top: 0; }
+.wpcf7 .wpcf7-form { display: flex; flex-direction: column; }
+
+/* Fix crítico: CF7 envolve cada campo num <span> que é inline por omissão */
+.wpcf7 .wpcf7-form-control-wrap { display: block; width: 100%; }
+
+/* Grupo label + campo */
+.wpcf7 .cf7-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+
+/* Labels */
+.wpcf7 label { font-size: 0.85rem; font-weight: 600; color: var(--navy); display: block; }
+
+/* Inputs, select, textarea */
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 input[type="tel"],
 .wpcf7 select,
-.wpcf7 textarea { padding: 12px 16px; border: 1.5px solid var(--gray-300); border-radius: 10px; font-family: var(--font-sans); font-size: 0.95rem; color: var(--text); background: var(--white); transition: border-color var(--transition); width: 100%; box-sizing: border-box; }
+.wpcf7 textarea {
+  display: block;
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color var(--transition);
+  width: 100%;
+  box-sizing: border-box;
+}
 .wpcf7 input:focus,
 .wpcf7 select:focus,
 .wpcf7 textarea:focus { outline: none; border-color: var(--mint); box-shadow: 0 0 0 3px rgba(126,207,192,0.15); }
 .wpcf7 textarea { resize: vertical; min-height: 110px; }
-.wpcf7 input[type="submit"] { margin-top: 24px; display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 14px 32px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em; background: var(--mint); color: var(--navy); border: none; cursor: pointer; transition: all var(--transition); }
+
+/* Botão submit */
+.wpcf7 input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--mint);
+  color: var(--navy);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
 .wpcf7 input[type="submit"]:hover { background: var(--mint-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(126,207,192,0.4); }
+
+/* Spinner (aparece durante envio) */
+.wpcf7 .wpcf7-spinner { display: none !important; }
+
+/* Mensagens de resposta */
 .wpcf7-response-output { margin-top: 16px; padding: 14px 18px; border-radius: 10px; font-size: 0.9rem; font-weight: 500; border: none !important; }
 .wpcf7-mail-sent-ok { background: var(--mint-pale); color: var(--navy); }
 .wpcf7-validation-errors, .wpcf7-mail-sent-ng { background: #fff0f0; color: #c0392b; }
 .wpcf7-not-valid-tip { color: #c0392b; font-size: 0.78rem; margin-top: 4px; display: block; }
-.wpcf7-acceptance label { font-size: 0.83rem; color: var(--gray-500); font-weight: 400; display: flex; align-items: flex-start; gap: 10px; cursor: pointer; margin-top: 20px; }
-.wpcf7-acceptance input[type="checkbox"] { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; accent-color: var(--mint); }
+
+/* Linha de privacidade */
+.wpcf7 .cf7-privacy { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px; }
+.wpcf7 .cf7-privacy .wpcf7-list-item { margin: 0; }
+.wpcf7 .cf7-privacy input[type="checkbox"] { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; accent-color: var(--mint); }
+.wpcf7 .cf7-privacy span,
+.wpcf7 .cf7-privacy button { font-size: 0.83rem; color: var(--gray-500); font-weight: 400; }
 
 @media (max-width: 768px) { .contact-form-wrap { padding: 32px 24px; } }
