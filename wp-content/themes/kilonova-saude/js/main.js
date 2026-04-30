@@ -32,6 +32,65 @@ function applyTranslations(lang) {
   document.querySelectorAll('.lang-option').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  translateCF7(t);
+}
+
+// ---- CF7 form i18n ----
+// Traduz os elementos do Contact Form 7 que não suportam data-i18n diretamente:
+// placeholders dos inputs, opções do select e o botão de submissão.
+function translateCF7(t) {
+  const form = document.querySelector('.wpcf7-form');
+  if (!form) return;
+
+  // Helper: remove o " *" do final do label para usar como placeholder
+  const strip = str => (str || '').replace(/\s*\*$/, '').trim();
+
+  // --- Inputs de texto (tenta vários nomes comuns do CF7) ---
+  const nameInput = form.querySelector(
+    'input[name="your-name"], input[name="nome"], input[name="name"]'
+  );
+  const phoneInput = form.querySelector(
+    'input[name="your-phone"], input[name="telefone"], input[name="phone"]'
+  );
+  const emailInput = form.querySelector(
+    'input[name="your-email"], input[name="email"]'
+  );
+  const msgArea = form.querySelector(
+    'textarea[name="your-message"], textarea[name="mensagem"], textarea[name="message"]'
+  );
+
+  if (nameInput  && t.form_name)               nameInput.placeholder  = strip(t.form_name);
+  if (phoneInput && t.form_phone)              phoneInput.placeholder = strip(t.form_phone);
+  if (emailInput && t.form_email)              emailInput.placeholder = strip(t.form_email);
+  if (msgArea    && t.form_message_placeholder) msgArea.placeholder   = t.form_message_placeholder;
+
+  // --- Select de serviço ---
+  const select = form.querySelector('select');
+  if (select) {
+    const opts = [
+      t.form_service_placeholder,
+      t.form_srv1,
+      t.form_srv2,
+      t.form_srv3,
+      t.form_srv4,
+    ];
+    select.querySelectorAll('option').forEach((opt, i) => {
+      if (opts[i] !== undefined) opt.textContent = opts[i];
+    });
+  }
+
+  // --- Botão de submissão ---
+  const submit = form.querySelector('input[type="submit"], button[type="submit"]');
+  if (submit && t.form_submit) {
+    if (submit.tagName === 'INPUT') submit.value = t.form_submit;
+    else submit.textContent = t.form_submit;
+  }
+
+  // --- Texto do RGPD / Privacidade ---
+  const privacySpan = form.querySelector('[data-i18n="form_privacy_1"]');
+  const privacyLink = form.querySelector('[data-i18n="form_privacy_link"]');
+  if (privacySpan && t.form_privacy_1) privacySpan.textContent = t.form_privacy_1;
+  if (privacyLink && t.form_privacy_link) privacyLink.textContent = t.form_privacy_link;
 }
 
 // Lang dropdown
